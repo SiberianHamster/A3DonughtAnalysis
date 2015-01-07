@@ -8,11 +8,11 @@
       this.numberOrdered = numberOrdered;
       
       this.salePerHour = function(){
-        ((Math.round(Math.random() * (this.hourlyTrafficmax - this.hourlyTrafficmin) + this.hourlyTrafficmin))) * (this.percentEntering * .01) * numberOrdered;
+        return ((Math.round(Math.random() * (this.hourlyTrafficmax - this.hourlyTrafficmin) + this.hourlyTrafficmin))) * (this.percentEntering * .01) * numberOrdered;
       };
-      
+
       this.report = function(){
-      
+        console.log (this.location + " needs " + this.salePerHour());
       };
     }
 
@@ -22,6 +22,6 @@
     var Wedgewood = new Store ("Wedgewood", 11, 20, 60, 20, 1.5)
     var Ballard = new Store("Ballard", 11, 25, 175, 33, 1)
 
-
+    Downtown.report();
 
   </script>
