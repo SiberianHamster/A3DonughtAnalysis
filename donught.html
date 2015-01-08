@@ -8,11 +8,23 @@
       this.numberOrdered = numberOrdered;
       
       this.salePerHour = function(){
-        return ((Math.round(Math.random() * (this.hourlyTrafficmax - this.hourlyTrafficmin) + this.hourlyTrafficmin))) * (this.percentEntering * .01) * numberOrdered;
+        return Math.round(((Math.round(Math.random() * (this.hourlyTrafficmax - this.hourlyTrafficmin) + this.hourlyTrafficmin))) * (this.percentEntering * .01)) * numberOrdered;
       };
 
-      this.report = function(){
-        console.log (this.location + " needs " + this.salePerHour());
+      this.report = function(){ 
+        var hours;
+        var donughtThisHour;
+        var donughtSoFar=0;
+        for(hours = 1; hours <= this.hoursOperation; hours++){
+          donughtThisHour = this.salePerHour();
+          donughtSoFar += donughtThisHour;
+         console.log(this.location + " needs " + donughtThisHour + " donuts, hour " + hours);
+        };
+        console.log(this.location + " needs a total of " + donughtSoFar + " donuts.")
+
+
+
+        
       };
     }
 
@@ -23,5 +35,9 @@
     var Ballard = new Store("Ballard", 11, 25, 175, 33, 1)
 
     Downtown.report();
+    CapitolHill.report();
+    SouthLakeUnion.report();
+    Wedgewood.report();
+    Ballard.report();
 
   </script>
