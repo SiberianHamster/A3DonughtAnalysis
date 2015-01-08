@@ -1,0 +1,76 @@
+This is a donut analysis program.  With some pre entered data, we will figure out how many donut a given location will need depending on a range of foot traffic, a percentage of people entering the store from the foot traffic, number of donughts each person will buy.  This will run per hour of operation for the entire day and calculate at the total amount per day per location.
+
+
+Credit given to my favorite website for code for generating a random number within a range.
+http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+
+Even though i created a test case that ran 100 times, i still confirmed with Brook that it would hit all the numbers in between.
+
+Sarah B and I also collaberated heavily on the code.
+
+Brook helping me solve the "oh no, did i code myself into a corner problem" where i ended up having the counter be stuck in a function that won't return out.  Solution...put the loop in the function too.
+
+Mel for helping me debug the animal running game which this code is very heavily based on.
+
+Charese for helping me with my NAN flavored donuts.  It turns out you can't add anything to a undefined variable.  Also with my miscounted parenthesis in my math that created lots of decimal numbers.
+
+ Downtown needs 56 donuts, hour 1 
+ Downtown needs 60 donuts, hour 2 
+ Downtown needs 48 donuts, hour 3 
+ Downtown needs 60 donuts, hour 4 
+ Downtown needs 52 donuts, hour 5 
+ Downtown needs 68 donuts, hour 6 
+ Downtown needs 60 donuts, hour 7 
+ Downtown needs 84 donuts, hour 8 
+ Downtown needs 32 donuts, hour 9 
+ Downtown needs 48 donuts, hour 10 
+ Downtown needs 60 donuts, hour 11 
+ Downtown needs a total of 628 donuts. 
+ Capitol Hill needs 36 donuts, hour 1 
+ Capitol Hill needs 32 donuts, hour 2 
+ Capitol Hill needs 36 donuts, hour 3 
+ Capitol Hill needs 10 donuts, hour 4 
+ Capitol Hill needs 36 donuts, hour 5 
+ Capitol Hill needs 28 donuts, hour 6 
+ Capitol Hill needs 28 donuts, hour 7 
+ Capitol Hill needs 20 donuts, hour 8 
+ Capitol Hill needs 36 donuts, hour 9 
+ Capitol Hill needs 8 donuts, hour 10 
+ Capitol Hill needs 14 donuts, hour 11 
+ Capitol Hill needs a total of 284 donuts. 
+ South Lake Union needs 66 donuts, hour 1 
+ South Lake Union needs 72 donuts, hour 2 
+ South Lake Union needs 54 donuts, hour 3 
+ South Lake Union needs 60 donuts, hour 4 
+ South Lake Union needs 72 donuts, hour 5 
+ South Lake Union needs 66 donuts, hour 6 
+ South Lake Union needs 54 donuts, hour 7 
+ South Lake Union needs 60 donuts, hour 8 
+ South Lake Union needs 72 donuts, hour 9 
+ South Lake Union needs 54 donuts, hour 10 
+ South Lake Union needs 54 donuts, hour 11 
+ South Lake Union needs a total of 684 donuts. 
+ Wedgewood needs 7.5 donuts, hour 1 
+ Wedgewood needs 15 donuts, hour 2 
+ Wedgewood needs 13.5 donuts, hour 3 
+ Wedgewood needs 9 donuts, hour 4 
+ Wedgewood needs 13.5 donuts, hour 5 
+ Wedgewood needs 6 donuts, hour 6 
+ Wedgewood needs 15 donuts, hour 7 
+ Wedgewood needs 10.5 donuts, hour 8 
+ Wedgewood needs 7.5 donuts, hour 9 
+ Wedgewood needs 10.5 donuts, hour 10 
+ Wedgewood needs 10.5 donuts, hour 11 
+ Wedgewood needs a total of 118.5 donuts. 
+ Ballard needs 35 donuts, hour 1 
+ Ballard needs 35 donuts, hour 2 
+ Ballard needs 18 donuts, hour 3 
+ Ballard needs 22 donuts, hour 4 
+ Ballard needs 13 donuts, hour 5 
+ Ballard needs 38 donuts, hour 6 
+ Ballard needs 29 donuts, hour 7 
+ Ballard needs 14 donuts, hour 8 
+ Ballard needs 11 donuts, hour 9 
+ Ballard needs 30 donuts, hour 10 
+ Ballard needs 21 donuts, hour 11 
+ Ballard needs a total of 266 donuts.
