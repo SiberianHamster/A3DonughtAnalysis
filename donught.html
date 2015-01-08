@@ -1,38 +1,46 @@
   <script>
+    /*This script will calculate how many donuts are needed at a given store per hour that it is in operation and then a total amount for the day for said store based on a preset data.*/
+
+
+    /*This is my object creator*/
     function Store(location, hoursOperation, hourlyTrafficmin, hourlyTrafficmax, percentEntering, numberOrdered){
-      this.location = location;
-      this.hoursOperation = hoursOperation;
-      this.hourlyTrafficmin = hourlyTrafficmin;
-      this.hourlyTrafficmax = hourlyTrafficmax;
-      this.percentEntering = percentEntering;
-      this.numberOrdered = numberOrdered;
-      
-      this.salePerHour = function(){
-        return Math.round(((Math.round(Math.random() * (this.hourlyTrafficmax - this.hourlyTrafficmin) + this.hourlyTrafficmin))) * (this.percentEntering * .01)) * numberOrdered;
-      };
-
-      this.report = function(){ 
-        var hours;
-        var donughtThisHour;
-        var donughtSoFar=0;
-        for(hours = 1; hours <= this.hoursOperation; hours++){
-          donughtThisHour = this.salePerHour();
-          donughtSoFar += donughtThisHour;
-         console.log(this.location + " needs " + donughtThisHour + " donuts, hour " + hours);
-        };
-        console.log(this.location + " needs a total of " + donughtSoFar + " donuts.")
-
-
-
-        
-      };
-    }
-
+      this.location = location; //location of store
+      this.hoursOperation = hoursOperation; //the number of hours in operation
+      this.hourlyTrafficmin = hourlyTrafficmin; //expected minimum traffic
+      this.hourlyTrafficmax = hourlyTrafficmax; //expected maximum traffic
+      this.percentEntering = percentEntering; //percent of people who will enter
+      this.numberOrdered = numberOrdered; //average donut ordered per person enters
+    
+    /*This is where the properties of my object are.*/  
     var Downtown = new Store ("Downtown", 11, 80, 220, 10, 4)
     var CapitolHill = new Store ("Capitol Hill", 11, 5, 45, 45, 2)
     var SouthLakeUnion = new Store ("South Lake Union", 11, 180, 250, 5, 6)
     var Wedgewood = new Store ("Wedgewood", 11, 20, 60, 20, 1.5)
     var Ballard = new Store("Ballard", 11, 25, 175, 33, 1)
+
+
+
+      /*This function calculates sales of donuts per hour*/
+    
+      this.salePerHour = function(){
+        return Math.round(((Math.round(Math.random() * (this.hourlyTrafficmax - this.hourlyTrafficmin) + this.hourlyTrafficmin))) * (this.percentEntering * .01)) * numberOrdered;
+      };
+
+      /*This function has both the report and the loop as well as the final count for an entire store.*/
+      this.report = function(){ 
+        var hours;
+        var donutThisHour;
+        var donutSoFar=0;
+        for(hours = 1; hours <= this.hoursOperation; hours++){
+          donutThisHour = this.salePerHour();
+          donutSoFar += donutThisHour;
+         console.log(this.location + " needs " + donutThisHour + " donuts, hour " + hours);
+        };
+        console.log(this.location + " needs a total of " + donutSoFar + " donuts.")  
+      };
+    }
+
+    /*This is the main body where it calls the other functions and displays the answer inthe console*/
 
     Downtown.report();
     CapitolHill.report();

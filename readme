@@ -1,0 +1,15 @@
+This is a donut analysis program.  With some pre entered data, we will figure out how many donut a given location will need depending on a range of foot traffic, a percentage of people entering the store from the foot traffic, number of donughts each person will buy.  This will run per hour of operation for the entire day and calculate at the total amount per day per location.
+
+
+Credit given to my favorite website for code for generating a random number within a range.
+http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+
+Even though i created a test case that ran 100 times, i still confirmed with Brook that it would hit all the numbers in between.
+
+Sarah B and I also collaberated heavily on the code.
+
+Brook helping me solve the "oh no, did i code myself into a corner problem" where i ended up having the counter be stuck in a function that won't return out.  Solution...put the loop in the function too.
+
+Mel for helping me debug the animal running game which this code is very heavily based on.
+
+Charese for helping me with my NAN flavored donuts.  It turns out you can add anything to a undefined variable.  Also with my miscounted parenthesis in my math that created lots of decimal numbers.
